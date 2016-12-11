@@ -1,0 +1,18 @@
+{
+    "vertices": [
+        {
+            "name": "v1",
+            "class": "router"
+        },
+        {
+            "name": "v2",
+            "class": "router"
+        }
+    ],
+    "edges": [
+        {
+            "from": "v1",
+            "to": "v2"
+        }
+    ]
+}
