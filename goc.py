@@ -2,6 +2,7 @@
 
 import json
 import sys
+import os
 
 
 def loadJSON(jsonFile):
@@ -27,8 +28,10 @@ def checkGraph(graph):
 		yield "multiple vertices with the same name"
 
 def generate():
+	workDir = "example1"
 	graphFile = "graph1.json"
-	graph = loadJSON(graphFile)
+	graphFileFull = os.path.join(workDir, graphFile)
+	graph = loadJSON(graphFileFull)
 	errors = [err for err in checkGraph(graph)]
 	if errors:
 		print "Found one or more errors while loading '%s':" % graphFile
